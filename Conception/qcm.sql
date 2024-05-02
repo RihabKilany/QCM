@@ -13,12 +13,12 @@ CREATE TABLE utilisateur(
 CREATE TABLE qcm(
    id INT NOT NULL AUTO_INCREMENT,
    titre VARCHAR(50)  NOT NULL,
-   date_creation DATE NOT NULL,
-   date_expiration Date,
+   dateCreation DATE  NOT NULL,
+   dateExpiration Date,
    theme VARCHAR(50) NOT NULL,
-   id_user INT NOT NULL,
+   idUser INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_user) REFERENCES Utilisateur(id)
+   FOREIGN KEY(idUser) REFERENCES Utilisateur(id)
 )ENGINE=InnoDB;
 
 CREATE TABLE question(
@@ -26,27 +26,27 @@ CREATE TABLE question(
    libelle VARCHAR(50)  NOT NULL,
    auteur VARCHAR(50)  NOT NULL,
    point INT (11),
-   id_user INT NOT NULL,
-   id_qcm INT NOT NULL,
+   idUser INT NOT NULL,
+   idQcm INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_qcm) REFERENCES Qcm(id),
-   FOREIGN KEY(id_user) REFERENCES Utilisateur(id)
+   FOREIGN KEY(idQcm) REFERENCES Qcm(id),
+   FOREIGN KEY(idUser) REFERENCES Utilisateur(id)
 )ENGINE=InnoDB;
 
 CREATE TABLE reponse(
    id INT NOT NULL AUTO_INCREMENT,
    indicateur VARCHAR(50)  NOT NULL,
    reponse VARCHAR(50) ,
-   id_q INT NOT NULL,
+   idQuestion INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_q) REFERENCES Question(id)
+   FOREIGN KEY(idQuestion) REFERENCES Question(id)
 )ENGINE=InnoDB;
 
-CREATE TABLE passer_qcm(
-   id_user INT NOT NULL ,
-   id_qcm INT NOT NULL,
+CREATE TABLE passerQcm(
+   idUser INT NOT NULL ,
+   idQcm INT NOT NULL,
    note VARCHAR(50),
-   PRIMARY KEY(id_user, id_qcm),
-   FOREIGN KEY(id_user) REFERENCES Utilisateur(id),
-   FOREIGN KEY(id_qcm) REFERENCES Qcm(id)
+   PRIMARY KEY(idUser, idQcm),
+   FOREIGN KEY(idUser) REFERENCES Utilisateur(id),
+   FOREIGN KEY(idQcm) REFERENCES Qcm(id)
 )ENGINE=InnoDB;
