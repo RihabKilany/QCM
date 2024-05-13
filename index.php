@@ -1,3 +1,9 @@
 <?php
+include "vendor/autoload.php";
+use App\Controller\UserController;
 
-include "views/template.php";
+$userctl = new UserController();
+$userctl->userHttp();
+
+
+
