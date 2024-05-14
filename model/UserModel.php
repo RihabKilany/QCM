@@ -22,4 +22,27 @@ class UserModel extends ModelGenerique{
         return true; 
     }
 
+
+    public function connexion($login, $password){
+        $query = "SELECT *FROM utilisateur WHERE login = :login AND password = :password";
+        $stmt = $this->executerReq($query, [
+            "login"=> $login,
+            "password" => $password
+        ]);
+        $user = $stmt->fetch();
+        if ($user){
+            extract($user);
+            $utilisateur = new Utilisateur ( $id, $nom, $login, $password, $statut, $email);
+            
+            $_SESSION['user'] = $utilisateur;
+
+            return true; 
+               
+            
+        }else {
+            return false;
+        }
+    }
+
 }
+

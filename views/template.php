@@ -25,10 +25,10 @@
                 <!-- PHP endif; -->
 
                 <!-- <a class="btn btn-primary" href="?actionUser=compte&id= PHP unserialize($_SESSION["user"])->getId(); ">Mon compte</a> -->
-                <a class="btn btn-danger" href="?actionUser=deconnexion">Déconnexion</a>
+                <a class="btn btn-danger" href="?action=deconnexion">Déconnexion</a>
                 
             <!-- PHP else: -->
-                <a class="btn btn-success" href="?actionUser=connexion">Connexion</a>
+                <a class="btn btn-success" href="?action=connexion">Connexion</a>
                 <a class="btn btn-success" href="?action=inscription">Inscription</a>
             <!-- PHP endif; -->
 

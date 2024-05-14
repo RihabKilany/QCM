@@ -6,8 +6,6 @@
     <div class="container">
         <h2 class="mt-5">Inscription</h2>
         <form action="" method="post">
-
-        <!-- <input type="hidden" class="form-control" id="id" name="id"> -->
             <div class="form-group">
                 <label for="nom">Nom :</label>
                 <input type="text" class="form-control" id="nom" name="nom" required>
@@ -21,7 +19,7 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="status">Status :</label>
+                <label for="statut">Statut :</label>
                 <input type="text" class="form-control" id="statut" name="statut" required>
             </div>
             <div class="form-group">
