@@ -19,9 +19,9 @@
 
                 <?php if($_SESSION["statut"] == "enseignant"): ?>
                     <a class="btn btn-success" href="?actionAdmin=liste">Utilisateur</a>
-                    <a class="btn btn-success" href="?actionAgence=agence">QCM</a>
-                    <a class="btn btn-success" href="?actionVehicule=vehicule">Question</a>
-                    <a class="btn btn-success" href="?actionVehicule=vehicule">Response</a>
+                    <a class="btn btn-success" href="?action=qcm">QCM</a>
+                    <a class="btn btn-success" href="?action=question">Question</a>
+                    <a class="btn btn-success" href="?action=reponse">Reponse</a>
                 <?php endif; ?>
 
                 <?php if($_SESSION["statut"] == "etudiant"): ?>
