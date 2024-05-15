@@ -7,7 +7,7 @@ use App\Entity\Question;
 class QuestionModel extends ModelGenerique{
 
 
-    public function ajoutQuestoin(Question $question){
+    public function ajoutQuestion(Question $question){
 
         $query = "INSERT INTO question VALUES (NULL, :libelle, :auteur, :point, :idUser, :idQCM)";
         $stmt = $this->executerReq($query, [

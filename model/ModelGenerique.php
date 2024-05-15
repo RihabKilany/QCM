@@ -27,10 +27,10 @@ abstract class ModelGenerique{
 
 
     public function getAll($table){
-        $query = "SELECT * FROM" . $table;
+        $query = "SELECT * FROM " . $table;
 
         $stmt = $this->executerReq($query);
-        $stmt->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\class\\'.$table);
+        $stmt->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\Entity\\'.$table);
         
         return $stmt->fetchAll();
     }
