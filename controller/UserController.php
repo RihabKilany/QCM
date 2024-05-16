@@ -15,6 +15,16 @@
                 $model = new UserModel();
 
                 switch ($action){
+
+                    case "utilisateur":
+                        $utilisateurs = $model->getAll('Utilisateur');
+                        include "views/utilisateur/index.php";
+                        break;
+
+                        
+                       
+                      
+
                     case "inscription":
                         if(isset($_POST['nom']) && isset($_POST['password'])){
                             extract($_POST); 
@@ -25,6 +35,8 @@
                         }
                        include "views/utilisateur/inscription.php";
                        break;
+
+                    
 
                     case "login":
                         if(isset($_POST['login']) && isset($_POST['password'])){

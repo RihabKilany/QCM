@@ -18,7 +18,7 @@
             <?php if(isset($_SESSION["user"])): ?>
 
                 <?php if($_SESSION["statut"] == "enseignant"): ?>
-                    <a class="btn btn-success" href="?actionAdmin=liste">Utilisateur</a>
+                    <a class="btn btn-success" href="?action=utilisateur">Utilisateur</a>
                     <a class="btn btn-success" href="?action=qcm">QCM</a>
                     <a class="btn btn-success" href="?action=question">Question</a>
                     <a class="btn btn-success" href="?action=reponse">Reponse</a>

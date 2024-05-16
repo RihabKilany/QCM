@@ -22,9 +22,11 @@ class UserModel extends ModelGenerique{
         return true; 
     }
 
+    
+
 
     public function connexion($login, $password){
-        $query = "SELECT *FROM utilisateur WHERE login = :login AND password = :password";
+        $query = "SELECT * FROM utilisateur WHERE login = :login AND password = :password";
         $stmt = $this->executerReq($query, [
             "login"=> $login,
             "password" => $password

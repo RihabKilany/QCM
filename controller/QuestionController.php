@@ -10,11 +10,12 @@ use App\Model\UserModel;
 class QuestionController{
 
     public function questionsHttp(){
-        $model1 = new UserModel();
 
         if(isset($_GET['action'])){
             $action = $_GET ['action'];
             $mldquestion = new QuestionModel();
+            $model = new UserModel();
+
 
             switch($action){
 
@@ -24,7 +25,7 @@ class QuestionController{
                     break;  
                 
                 case "ajoutQuestion":
-                    if(isset($_POST['ajouter'])){
+                    if(isset($_POST['libelle'])){
                         extract($_POST);
                         $question = new Question(0, $libelle, $auteur, $point, $utilisateur, $qcm );
                         $mldquestion->ajoutQuestion($question);
@@ -32,7 +33,8 @@ class QuestionController{
                         header("location: ?action=question");
                         exit;
                     }
-                    // $utilisateurs = $model1->getAll();
+
+                    // $utilisateurs = $model->getAll('Utilisateur');
                     
                     include "views/question/form.php";
                     break;

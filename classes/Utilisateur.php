@@ -12,7 +12,7 @@ class Utilisateur
     private string $email;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $nom, string $login, string $password, string $statut, string $email)
+    public function __construct(int $id = 0, string $nom = '', string $login = '', string $password = '', string $statut = '', string $email = '')
     {
         $this->id = $id;
         $this->nom = $nom;
