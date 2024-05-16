@@ -12,15 +12,15 @@ class Question
     private Qcm $idQcm;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $libelle, string $auteur, int $point, Utilisateur $idUser, Qcm $idQcm)
-    {
-        $this->id = $id;
-        $this->libelle = $libelle;
-        $this->auteur = $auteur;
-        $this->point = $point;
-        $this->idUser = $idUser;
-        $this->idQcm = $idQcm;
-    }
+    // public function __construct(int $id, string $libelle, string $auteur, int $point, Utilisateur $idUser, Qcm $idQcm)
+    // {
+    //     $this->id = $id;
+    //     $this->libelle = $libelle;
+    //     $this->auteur = $auteur;
+    //     $this->point = $point;
+    //     $this->idUser = $idUser;
+    //     $this->idQcm = $idQcm;
+    // }
 
 
     // GETTER

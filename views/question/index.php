@@ -3,7 +3,7 @@
     <a href="?action=ajoutQuestion" class="btn btn-success" >Ajout_Question</a>
     <h2>Liste des Questions</h2>
 
-    <table class="table-success">
+    <table class="table table-success">
         <tr class="table-success">
             <td>ID</td>
             <td>Libelle</td>
