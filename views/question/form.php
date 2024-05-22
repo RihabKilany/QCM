@@ -11,7 +11,7 @@
         <select class="form-control" id="auteur" name="auteur">
             <option value="">Sélectionnez un utilisateur</option>
             <?php foreach ($utilisateurs as $utilisateur): ?>
-                <option value="<?php echo $utilisateur->getId(); ?>"><?php echo $utilisateur->getNomComplet(); ?></option>
+                <option value="<?php echo $utilisateur->getId(); ?>"><?php echo $utilisateur->getNom(); ?></option>
             <?php endforeach; ?>
         </select>
     </div>

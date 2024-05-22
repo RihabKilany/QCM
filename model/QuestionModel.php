@@ -6,10 +6,7 @@ use App\Entity\Question;
 
 class QuestionModel extends ModelGenerique{
 
-    public function getAllQuestions()
-    {
-        return $this->getAll('question');
-    }
+    
 
 
     public function ajoutQuestion(Question $question){

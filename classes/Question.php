@@ -11,7 +11,6 @@ class Question
     private Utilisateur $idUser;
     private Qcm $idQcm;
 
-    // CONSTRUCTOR
     // public function __construct(int $id, string $libelle, string $auteur, int $point, Utilisateur $idUser, Qcm $idQcm)
     // {
     //     $this->id = $id;
